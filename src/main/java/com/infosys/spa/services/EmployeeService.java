@@ -19,7 +19,7 @@ public class EmployeeService {
 	}
 	
 	public List<Employee> findAllEmployees(){
-		return employeeRepository.findAll();
+		return employeeRepository.findByOrderByIdAsc();
 	}
 	
 	public Employee findByEmployeeName(String employeeName) {

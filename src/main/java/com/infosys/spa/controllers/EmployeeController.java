@@ -28,7 +28,7 @@ public class EmployeeController {
 		this.employeeService = employeeService;
 	}
 	
-	//http://localhost:5000/user/all
+	//http://localhost:5000/employee/all
 	//Returns JSON Array of all users
 	@GetMapping(value="/all")
 	public List<Employee> findAllEmployees(){
