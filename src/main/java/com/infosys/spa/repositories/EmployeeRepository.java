@@ -9,6 +9,6 @@ import com.infosys.spa.models.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
-	Employee findByEmployeeName(String employeeName);
+//	Employee findByEmployeeName(String employeeName);
 	List<Employee> findByOrderByIdAsc();
 }

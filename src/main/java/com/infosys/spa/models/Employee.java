@@ -9,74 +9,56 @@ import javax.persistence.Id;
 @Entity(name="employees")
 public class Employee {
 
-	@Id //Primary Key
-	@Column(name="employee_id") 
+	@Id //Primary Key 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
 	private int id;
-	@Column(name="employee_name")
-	private String employeeName;
-	@Column(name="employee_address")
-	private String employeeAddress;
-	@Column(name="employee_salary")
-	private int employeeSalary;
+	@Column
+	private String firstName;
+	@Column
+	private String lastName;
+	@Column
+	private int addressId;
+	@Column
+	private int salary;
 	
 	public Employee() {
 		super();
 	}
-
-	public Employee(String employeeName, String employeeAddress, int employeeSalary) {
-		super();
-		this.employeeName = employeeName;
-		this.employeeAddress = employeeAddress;
-		this.employeeSalary = employeeSalary;
-	}
-
-	public Employee(int id, String employeeName, String employeeAddress, int employeeSalary) {
-		super();
-		this.id = id;
-		this.employeeName = employeeName;
-		this.employeeAddress = employeeAddress;
-		this.employeeSalary = employeeSalary;
-	}
-
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	public String getEmployeeName() {
-		return employeeName;
+	public String getFirstName() {
+		return firstName;
 	}
-
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-
-	public String getEmployeeAddress() {
-		return employeeAddress;
+	public String getLastName() {
+		return lastName;
 	}
-
-	public void setEmployeeAddress(String employeeAddress) {
-		this.employeeAddress = employeeAddress;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-
-	public int getEmployeeSalary() {
-		return employeeSalary;
+	public int getAddressId() {
+		return addressId;
 	}
-
-	public void setEmployeeSalary(int employeeSalary) {
-		this.employeeSalary = employeeSalary;
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
 	}
-
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", employeeName=" + employeeName + ", employeeAddress=" + employeeAddress
-				+ ", employeeSalary=" + employeeSalary + "]";
-	}
-
-	
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", addressId=" + addressId
+				+ ", salary=" + salary + "]";
+	}	
 	
 }

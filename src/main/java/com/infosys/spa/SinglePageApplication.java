@@ -11,7 +11,7 @@ public class SinglePageApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SinglePageApplication.class, args);
-	}
+	} 
 
 	@Bean
 	WebMvcConfigurer corsConfigurer() {
